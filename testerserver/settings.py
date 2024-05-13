@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'testerserver.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ubutest',
+        'USER': 'postgres',
+        'PASSWORD': 'tic003',
+        'HOST': 'localhost',   # o la dirección IP de tu servidor PostgreSQL
+        'PORT': '5432',        # el puerto predeterminado de PostgreSQL es 5432
     }
 }
 
